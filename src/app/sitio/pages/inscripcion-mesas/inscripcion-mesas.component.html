@@ -1,0 +1,38 @@
+<div class="container">
+    <h2><p>Formulario de Inscripción</p></h2>
+    <div class="row">
+        <label for="dni">DNI: </label>
+        <input type="text">
+    </div>
+    <div class="row">
+        <label for="name">Apellidos: </label>
+        <input type="text">
+    </div>
+    <div class="row">
+        <label for="dni">Nombres: </label>
+        <input type="text">
+    </div>
+    <div class="row">
+        <label for="dni">Turno: </label>
+        <input type="datetime">
+    </div>
+    <div class="row">
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <mat-label>Carrera</mat-label>
+              <input type="text"
+                     matInput
+                     [formControl]="myControl"
+                     [matAutocomplete]="auto">
+              <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                  {{option}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </form>
+    </div>
+    <div class="row">
+        <button mat-button color="primary" type="submit">Enviar</button>
+    </div>
+</div>
