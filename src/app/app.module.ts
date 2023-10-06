@@ -4,60 +4,49 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SitioComponent } from './sitio/sitio.component';
-import { ComponentsComponent } from './sitio/components/components.component';
-import { PagesComponent } from './sitio/pages/pages.component';
-import { CardCarrerasComponent } from './sitio/components/card-carreras/card-carreras.component';
-import { FooterComponent } from './sitio/components/footer/footer.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
+//Componentes
 import { HeaderComponent } from './sitio/components/header/header.component';
-import { SliderComponent } from './sitio/components/slider/slider.component';
-import { InscripcionMesasComponent } from './sitio/pages/inscripcion-mesas/inscripcion-mesas.component';
-import { InstitucionalComponent } from './sitio/pages/institucional/institucional.component';
+import { FooterComponent } from './sitio/components/footer/footer.component';
 import { LoginComponent } from './sitio/pages/login/login.component';
-import { AdminComponent } from './admin/admin.component';
+import { InstitucionalComponent } from './sitio/pages/institucional/institucional.component';
+import { InscripcionMesasComponent } from './sitio/pages/inscripcion-mesas/inscripcion-mesas.component';
+import { EquipoDesarrolloComponent } from './sitio/pages/equipo-desarrollo/equipo-desarrollo.component';
+import { CardCarrerasComponent } from './sitio/components/card-carreras/card-carreras.component';
+import { SliderComponent } from './sitio/components/slider/slider.component';
 
-import {MatIconModule} from '@angular/material/icon';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatButtonModule} from '@angular/material/button';
-
-import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {Observable} from 'rxjs';
-import {NgFor, AsyncPipe} from '@angular/common';
+//Angular Material
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { PrincipalComponent } from './sitio/pages/principal/principal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SitioComponent,
-    ComponentsComponent,
-    PagesComponent,
-    CardCarrerasComponent,
-    FooterComponent,
     HeaderComponent,
-    SliderComponent,
+    FooterComponent,
+    LoginComponent,
     InscripcionMesasComponent,
     InstitucionalComponent,
-    LoginComponent,
-    AdminComponent
+    EquipoDesarrolloComponent,
+    CardCarrerasComponent,
+    SliderComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule,
-    MatDividerModule,
-    MatButtonModule,
-    FormControl,
-    FormsModule,
-    ReactiveFormsModule,
-    Observable,
-    NgFor,
-    AsyncPipe,
     MatAutocompleteModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

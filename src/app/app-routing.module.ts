@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SitioComponent } from './sitio/sitio.component';
+import { PrincipalComponent } from './sitio/pages/principal/principal.component';
+
 
 const routes: Routes = [
-  {path:'',component:SitioComponent}
+  {path:'',component:PrincipalComponent}
 ];
 
 @NgModule({
